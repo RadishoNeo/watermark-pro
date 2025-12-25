@@ -1,73 +1,81 @@
-# React + TypeScript + Vite
+# Watermark Tool - 在线水印工具
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+一个基于React的在线水印工具，支持为图片添加文字或图片水印。
 
-Currently, two official plugins are available:
+## 🌟 功能特性
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- 📝 **文字水印** - 支持添加自定义文字水印
+- 🖼️ **图片水印** - 支持添加图片作为水印
+- 🎨 **样式自定义** - 可调整字体、颜色、大小、透明度等
+- 📱 **响应式设计** - 适配各种设备屏幕
+- ⚡ **实时预览** - 即时查看水印效果
+- 💾 **一键下载** - 快速保存带水印的图片
 
-## React Compiler
+## 🚀 快速开始
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 安装依赖
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 启动开发服务器
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm run dev
 ```
+
+### 构建生产版本
+
+```bash
+npm run build
+```
+
+## 🛠️ 技术栈
+
+- **React** - 前端框架
+- **Vite** - 构建工具
+- **TypeScript** - 类型安全
+- **Tailwind CSS** - 样式框架
+
+## 📁 项目结构
+
+```
+watermark/
+├── src/
+│   ├── components/         # React组件
+│   │   ├── ImageWatermark.tsx
+│   │   └── ui/            # UI组件
+│   ├── lib/               # 工具函数
+│   ├── assets/            # 静态资源
+│   └── main.tsx           # 应用入口
+├── public/                # 静态资源
+├── LICENSE               # MIT许可证
+└── README.md             # 项目文档
+```
+
+## 📝 使用说明
+
+1. 上传需要添加水印的图片
+2. 选择水印类型（文字或图片）
+3. 自定义水印样式
+4. 调整水印位置和大小
+5. 点击下载保存结果
+
+## 🤝 贡献指南
+
+欢迎提交Issue和Pull Request来改进这个项目。
+
+## 📝 许可证
+
+本项目采用 [MIT License](LICENSE) 开源许可证。
+
+## 📧 联系方式
+
+如有问题或建议，欢迎通过以下方式联系：
+- 提交Issue
+- 发送邮件
+
+---
+
+⭐ 如果这个项目对你有帮助，请给个Star支持一下！
